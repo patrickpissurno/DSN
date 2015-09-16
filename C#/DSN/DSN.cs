@@ -37,7 +37,7 @@ namespace DSN
                     }
                     
                     //Process the data
-                    string[] datapair = data.Split('=');
+                    string[] dataPair = data.Split('=');
                     #region Reader & Callback call
                     switch (type)
                     {
@@ -45,11 +45,11 @@ namespace DSN
                         case "int32[]":
                         case "string[]":
                         case "single[]":
-                            string[] array = datapair[1].Split('|');
-                            callback(type, datapair[0], array);
+                            string[] array = dataPair[1].Split('|');
+                            callback(type, dataPair[0], array);
                             break;
                         default:
-                            callback(type, datapair[0], new string[] { datapair[1] });
+                            callback(type, dataPair[0], new string[] { dataPair[1] });
                             break;
                     }
                     #endregion
