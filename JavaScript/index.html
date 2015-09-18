@@ -1,1 +1,10 @@
 <script src = "DSN.js"> </script>
+<script src = "DSNSettings.js"> </script>
+<script>
+	var keys = ["player_position:5", "banana", "show"];
+	var values = [[10,55], 5, 99];
+	var result = DSN.Write(keys, values);
+	console.log("Serialized to: '" + result + "'");
+	console.log("");
+	DSN.Read(result);
+</script>
